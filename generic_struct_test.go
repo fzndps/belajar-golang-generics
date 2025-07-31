@@ -48,11 +48,17 @@ func TestGenericStruct(t *testing.T) {
 	fmt.Println(myData)
 }
 
+func SayHelloDawg(name string)  {
+	fmt.Println("Sap dawgg "+ name)
+}
+
 func TestGenericMethod(t *testing.T) {
 	myData := Data[string]{
 		First:  "Fizonenda",
 		Second: "Dea",
 	}
+
+	SayHelloDawg("hallo jawa")
 
 	assert.Equal(t, "Sondaya", myData.ChangeFirst("Sondaya"))
 	assert.Equal(t, "Poca", myData.ChangeSecond("Poca"))
